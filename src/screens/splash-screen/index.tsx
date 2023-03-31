@@ -4,6 +4,7 @@ import * as ExpoSplashScreen from "expo-splash-screen";
 import { images } from "../../assets/images";
 import { styles } from "./styles";
 import { useFonts } from "expo-font";
+import BottomTabNavigator from "../../navigation/BottomTabNavigator";
 
 // ExpoSplashScreen.preventAutoHideAsync()
 
@@ -18,24 +19,13 @@ const SplashScreen = ({ navigation }) => {
 	const onLayoutRootView = useCallback(async () => {
 		if (fontsLoaded) {
 			await ExpoSplashScreen.hideAsync();
-			navigation.navigate("HomeScreen");
+			navigation.navigate("BottomTabNav");
 		}
 	}, [fontsLoaded]);
 
 	if (!fontsLoaded) {
 		return null;
 	}
-
-	// useEffect(() => {
-	// 	const hideSplashScreen = async () => {
-	// 		await ExpoSplashScreen.hideAsync();
-	// 		navigation.navigate("HomeScreen");
-	// 	};
-
-	// 	const timer = setTimeout(hideSplashScreen, 3000);
-
-	// 	return () => clearTimeout(timer);
-	// }, []);
 
 	return (
 		<View style={styles.container} onLayout={onLayoutRootView}>

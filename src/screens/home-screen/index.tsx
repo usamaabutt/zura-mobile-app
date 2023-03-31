@@ -19,13 +19,30 @@ export const HomeScreen = () => {
 			</View>
 			<View style={styles.cardView}>
 				<ImageBackground
-					source={require("../../assets/images/card_background.png")}
+					source={images.card_background}
 					style={styles.imageBackground}
 					imageStyle={{
 						borderRadius: 4,
 					}}
 					resizeMode="cover"
-				></ImageBackground>
+				>
+					<Text style={styles.card_header_text}>
+						DAILY AFFIRMATION
+					</Text>
+					<Text style={styles.card_details_text}>
+						Lorem ipsum dolor sit amet consectetur. Sed cursus
+						platea sagittis.
+					</Text>
+				</ImageBackground>
+			</View>
+			<View style={styles.journal_Text_container}>
+				<Text style={styles.journal_Text}>MY JOURNAL</Text>
+			</View>
+			<View style={styles.journal_details_container}>
+				<View style={styles.journal_date_details}>
+					<Text>Lorem ipsum dolor sit...</Text>
+					<Text>{`Mar 6 28, 2023 (Upcoming)`}</Text>
+				</View>
 			</View>
 		</SafeAreaView>
 	);

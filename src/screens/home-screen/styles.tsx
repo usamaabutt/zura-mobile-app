@@ -42,5 +42,45 @@ export const styles = StyleSheet.create({
 	imageBackground: {
 		width: "100%",
 		height: 185,
+		justifyContent: "center",
+	},
+	card_header_text: {
+		marginHorizontal: 30,
+		color: theme.colors.white,
+		fontFamily: theme.fontFamilies.bold,
+		fontSize: theme.fontSize.smallText,
+	},
+	card_details_text: {
+		marginTop: 10,
+		marginLeft: 30,
+		marginRight: 15,
+		color: theme.colors.white,
+		fontFamily: theme.fontFamilies.text,
+		fontSize: theme.fontSize.titleMedium,
+		lineHeight: 23,
+	},
+	journal_Text_container: {
+		marginTop: 30,
+		paddingHorizontal: 8,
+		alignItems: "flex-start",
+	},
+	journal_Text: {
+		color: theme.colors.blackish,
+		fontSize: theme.fontSize.titleMedium,
+		fontFamily: theme.fontFamilies.bold,
+	},
+	journal_details_container: {
+		height: 168,
+		width: "96%",
+		marginTop: 13,
+		borderRadius: 4,
+		marginHorizontal: 8,
+		paddingHorizontal: 15,
+		backgroundColor: theme.colors.white,
+	},
+	journal_date_details: {
+		flexDirection: "row",
+		backgroundColor: "red",
+		justifyContent: "space-between",
 	},
 });

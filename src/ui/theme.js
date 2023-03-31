@@ -1,9 +1,9 @@
 import { Dimensions, Platform } from "react-native";
 
 const colors = {
-	background: "#F9F9FB",
+	background: "##D6CCCC",
 	white: "#ffffff",
-	inputbg: "#FBFBFB",
+	inputbg: "#F9F9FB",
 	btnBlue: "#2D6BEE",
 	btnGreen: "#3FB575",
 	blue100: "#0088FF",
@@ -26,10 +26,13 @@ const colors = {
 	red100: "#FFE9E9",
 	red200: "#FF0000",
 	blackish: "#171717",
+	black: "#000000",
 	btnGray: "#EFEFEF",
 	GrayBtnTitle: "#121212",
 	orange50: "#FF5D50",
 	pink50: "#FF796F",
+	primary: "#852D38",
+	secondary: "#864F54",
 };
 
 const spacesFrom1 = Array.from({ length: 64 }, (_, i) => i + 1);
