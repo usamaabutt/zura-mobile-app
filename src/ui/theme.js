@@ -56,6 +56,7 @@ const fontSize = {
 	xxxSmallText: 8,
 	xxSmallText: 10,
 	xSmallText: 14,
+	smallText15: 15,
 	smallText: 16,
 	smallTitle: 18,
 	titleMedium: 20,

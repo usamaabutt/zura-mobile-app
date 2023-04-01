@@ -77,7 +77,7 @@ const BottomTabNavigator: FC = () => {
 					tabBarLabel: ({ color }) => (
 						<Text
 							numberOfLines={2}
-							style={[styles(color).title, { width: "90%" }]}
+							style={[styles(color).title, { width: "80%" }]}
 						>
 							My Journal
 						</Text>
@@ -121,6 +121,7 @@ const styles = (color: string) =>
 			color,
 			height: 30,
 			textAlign: "center",
+			width: "80%",
 		},
 		icon: {
 			width: 24,

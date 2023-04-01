@@ -4,4 +4,5 @@ export const images = {
 	zuraLogo: require("./zuralogo.png"),
 	card_background: require("./card_background.png"),
 	sample_product: require("./sample_product.png"),
+	offer_background: require("./offer_background.jpg"),
 };

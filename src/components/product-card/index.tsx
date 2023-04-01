@@ -1,44 +1,58 @@
-import { FC, useState } from "react";
-import { Image, View, Text, TouchableOpacity } from "react-native";
-import { styles } from "./styles";
-import { images } from "../../assets/images";
+import { FC } from "react";
+import {
+	View,
+	Text,
+	Image,
+	StyleSheet,
+	ImageSourcePropType,
+} from "react-native";
 import { theme } from "../../ui";
-import StarRating from "react-native-star-rating-widget";
-import { icons } from "../../assets/icons";
+
 interface Props {
-  rating: number;
-  setRating: (rating: number) => void;
+	imageSource: ImageSourcePropType;
+	productTitle: string;
+	productPrice: number;
 }
 
-export const MonthlyProductCard: FC<Props> = ({ rating, setRating }) => {
-  return (
-    <View style={styles.container}>
-      <Image source={images.sample_product} style={styles.image} />
-      <View style={styles.innerContainer}>
-        <Text style={styles.aboutProductText}>ABOUT THE PRODUCT</Text>
-        <Text style={styles.aboutProductDescription}>
-          The Spiritual Journey begins with Awareness, Healing and Self-love.
-        </Text>
-        <View style={styles.ratingContainer}>
-          <StarRating
-            rating={rating}
-            onChange={setRating}
-            starSize={22}
-            starStyle={{
-              marginHorizontal: 0,
-            }}
-          />
-          <Text style={styles.totalRatingText}>(59)</Text>
-        </View>
-        <TouchableOpacity style={styles.readReviewButton}>
-          <Text style={styles.readReviewText}>Read Review</Text>
-          <Image
-            source={icons.arrow_front}
-            resizeMode="contain"
-            style={styles.readReviewArrow}
-          />
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
+export const ProductCard: FC<Props> = ({
+	imageSource,
+	productTitle,
+	productPrice,
+}) => {
+	return (
+		<View>
+			<Image
+				source={imageSource}
+				style={styles.productImage}
+				resizeMode="cover"
+			/>
+
+			<Text style={styles.productName} numberOfLines={3}>
+				{productTitle.toUpperCase()}
+			</Text>
+			<Text style={styles.productPrice}>${productPrice.toFixed(2)}</Text>
+		</View>
+	);
 };
+
+const styles = StyleSheet.create({
+	productImage: {
+		width: "100%",
+		height: 150,
+		borderRadius: 8,
+	},
+	productName: {
+		fontSize: theme.fontSize.smallText15,
+		fontFamily: theme.fontFamilies.text,
+		marginTop: 13,
+		width: 110,
+		textAlign: "left",
+	},
+	productPrice: {
+		fontSize: theme.fontSize.smallText15,
+		fontFamily: theme.fontFamilies.bold,
+		marginTop: 4,
+		color: theme.colors.primary,
+		textAlign: "left",
+	},
+});

@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
 	},
 	imageBackground: {
 		width: "100%",
-		height: 185,
+		height: 170,
 		justifyContent: "center",
 	},
 	card_header_text: {
