@@ -3,20 +3,34 @@ import React from "react";
 import { SearchIcon, FilterIcon, theme } from "../../ui";
 import { WP } from "../../services";
 
-export const ShopHeader = () => {
+interface ShopHeaderProps {
+  value?: string;
+  onPressSeachBtn?: () => void;
+  onPressFilterBtn?: () => void;
+  handleChangeText?: (text: string) => void;
+}
+
+export const ShopHeader = (props: ShopHeaderProps) => {
+  const { value, onPressSeachBtn, onPressFilterBtn, handleChangeText } = props;
+
   return (
     <View style={styles.container}>
       <View style={styles.leftContainer}>
-        <TouchableOpacity style={styles.iconContainer}>
+        <TouchableOpacity
+          onPress={onPressSeachBtn}
+          style={styles.iconContainer}
+        >
           <SearchIcon />
         </TouchableOpacity>
         <TextInput
+          value={value}
           placeholder="Search Shop"
           placeholderTextColor={theme.colors.fadeBlack}
+          onChangeText={handleChangeText}
           style={styles.textInputStyle}
         />
       </View>
-      <TouchableOpacity style={styles.rightContiner}>
+      <TouchableOpacity onPress={onPressFilterBtn} style={styles.rightContiner}>
         <FilterIcon />
       </TouchableOpacity>
     </View>
