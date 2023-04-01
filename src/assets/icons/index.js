@@ -6,4 +6,5 @@ export const icons = {
 	settings: require("./settings.png"),
 	check: require("./check.png"),
 	timer: require("./timer.png"),
+	arrow_front: require("./arrow_front.png"),
 };

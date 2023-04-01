@@ -13,11 +13,18 @@ import Header from "../../components/header";
 import { icons } from "../../assets/icons";
 import { theme } from "../../ui";
 import { Button, Spacer } from "../../components";
+import MonthlyProductCard from "../../components/product-of-the-month-card";
 
 export const HomeScreen = () => {
+	const [rating, setRating] = React.useState(0);
 	return (
 		<SafeAreaView style={styles.container}>
-			<ScrollView style={{ paddingHorizontal: 9 }}>
+			<ScrollView
+				contentContainerStyle={{
+					paddingHorizontal: 9,
+					paddingBottom: 10,
+				}}
+			>
 				<Header />
 				<View style={styles.cardView}>
 					<ImageBackground
@@ -88,6 +95,11 @@ export const HomeScreen = () => {
 				<Text style={styles.product_of_the_month_text}>
 					PRODUCT OF THE MONTH
 				</Text>
+				<Spacer.Column numberOfSpaces={2} />
+				<MonthlyProductCard
+					rating={rating}
+					setRating={(value) => setRating(value)}
+				/>
 			</ScrollView>
 		</SafeAreaView>
 	);
