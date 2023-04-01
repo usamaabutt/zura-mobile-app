@@ -8,7 +8,7 @@ import {
 } from "../../components";
 import { theme } from "../../ui";
 
-const ProductDetail = () => {
+const ProductDetail = ({ navigation }) => {
   const photos = [
     {
       uri: "https://cdn.pixabay.com/photo/2017/05/19/07/34/teacup-2325722__340.jpg",
@@ -23,10 +23,14 @@ const ProductDetail = () => {
       uri: "https://cdn.pixabay.com/photo/2017/05/16/21/24/gorilla-2318998__340.jpg",
     },
   ];
+
+  const handleGoBack = () => {
+    navigation.goBack();
+  };
   return (
     <View style={styles.container}>
       <Spacer.Column numberOfSpaces={5} />
-      <ProductDetailHeader />
+      <ProductDetailHeader goBack={handleGoBack} />
       <Spacer.Column numberOfSpaces={2} />
       <ScrollView>
         <Carousel photos={photos} />

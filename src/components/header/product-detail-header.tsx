@@ -3,10 +3,15 @@ import React from "react";
 import { theme, BackArrow, HeartIcon, ShareIcon } from "../../ui";
 import { Spacer } from "../spacer";
 
-export const ProductDetailHeader = () => {
+interface ProductDetailProps {
+  goBack: () => void;
+}
+
+export const ProductDetailHeader = (props: ProductDetailProps) => {
+  const { goBack } = props;
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.leftButton}>
+      <TouchableOpacity onPress={goBack} style={styles.leftButton}>
         <BackArrow />
       </TouchableOpacity>
       <View style={styles.rightContainer}>

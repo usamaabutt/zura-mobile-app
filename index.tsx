@@ -4,8 +4,11 @@ import { Provider } from "react-redux";
 import RootNavigator from "./src/navigation/root-navigation";
 import { store, persistor } from "./src/store/app/store";
 import { PersistGate } from "redux-persist/integration/react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet, LogBox } from "react-native";
 import { theme } from "./src/ui";
+
+LogBox.ignoreLogs(["Warning: ..."]); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 const App = () => {
   return (
