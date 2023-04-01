@@ -4,4 +4,6 @@ export const icons = {
 	journal: require("./journal.png"),
 	moon: require("./moon.png"),
 	settings: require("./settings.png"),
+	check: require("./check.png"),
+	timer: require("./timer.png"),
 };

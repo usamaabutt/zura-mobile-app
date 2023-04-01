@@ -4,7 +4,7 @@ import SettingsScreen from "../screens/settings-screen";
 import MoonRitualsScreen from "../screens/moon-rituals-screen";
 import ShopScreen from "../screens/shop-screen";
 import MyJournalScreen from "../screens/my-journal-screen";
-import { Image, Platform, Text, View, StyleSheet } from "react-native";
+import { Image, Text, StyleSheet } from "react-native";
 import { icons } from "../assets/icons";
 import { theme } from "../ui";
 import { FC } from "react";

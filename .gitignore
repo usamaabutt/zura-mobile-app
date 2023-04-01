@@ -1,1 +1,85 @@
-node_modules
+#How to remove a directory from the source control tree.
+#https://chhornponleu.medium.com/pods-ignoring-is-painful-checkout-how-i-solve-it-ccafe7e53fb8
+#https://stackoverflow.com/questions/24290358/remove-a-folder-from-git-tracking/45756120
+
+*.hprof
+
+android/.gradle/
+
+node_modules/
+npm-debug.log
+yarn-error.log
+
+/ios/Pods/
+./Pods
+/android/.idea/
+/android/app/build/
+/android/app/release/
+
+.env
+*.env.beta
+.env.staging
+.env.production
+
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+build/
+*.hprof
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
+
+# Bundle artifact
+*.jsbundle
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+# fastlane specific
+**/fastlane/report.xml
+
+# deliver temporary files
+**/fastlane/Preview.html
+
+# snapshot generated screenshots
+**/fastlane/screenshots
+
+# scan temporary files
+**/fastlane/test_output
+
+# builds created by fastlane
+/builds
+/builds/Smile.ipa
+/builds/Smile.app.dSYM.zip
+
+# Ruby / CocoaPods
+# ios/builds
+/ios/builds
+/vendor/bundle/

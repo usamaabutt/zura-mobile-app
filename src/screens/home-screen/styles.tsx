@@ -1,4 +1,3 @@
-import React from "react";
 import { Platform, StatusBar, StyleSheet } from "react-native";
 import { theme } from "../../ui";
 
@@ -8,27 +7,6 @@ export const styles = StyleSheet.create({
 		backgroundColor: theme.colors.background,
 		marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
 	},
-	welcomeText: {
-		fontSize: theme.fontSize.titleMedium,
-		color: theme.colors.blackish,
-		fontFamily: theme.fontFamilies.text,
-	},
-	userName: {
-		fontSize: theme.fontSize.titleMedium,
-		fontFamily: theme.fontFamilies.bold,
-		marginTop: 2,
-	},
-	header: {
-		flexDirection: "row",
-		justifyContent: "space-between",
-		alignItems: "center",
-		paddingHorizontal: 8,
-	},
-	logo: {
-		width: 63,
-		height: 63,
-		alignSelf: "center",
-	},
 	logoText: {
 		width: 35,
 		height: 40,
@@ -36,7 +14,6 @@ export const styles = StyleSheet.create({
 	cardView: {
 		alignItems: "center",
 		justifyContent: "center",
-		marginHorizontal: 12,
 		marginTop: 10,
 	},
 	imageBackground: {
@@ -45,7 +22,7 @@ export const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	card_header_text: {
-		marginHorizontal: 30,
+		marginLeft: 30,
 		color: theme.colors.white,
 		fontFamily: theme.fontFamilies.bold,
 		fontSize: theme.fontSize.smallText,
@@ -59,28 +36,56 @@ export const styles = StyleSheet.create({
 		fontSize: theme.fontSize.titleMedium,
 		lineHeight: 23,
 	},
-	journal_Text_container: {
-		marginTop: 30,
-		paddingHorizontal: 8,
-		alignItems: "flex-start",
-	},
 	journal_Text: {
-		color: theme.colors.blackish,
+		marginTop: 30,
+		color: theme.colors.black,
 		fontSize: theme.fontSize.titleMedium,
 		fontFamily: theme.fontFamilies.bold,
 	},
 	journal_details_container: {
 		height: 168,
-		width: "96%",
+		width: "100%",
 		marginTop: 13,
-		borderRadius: 4,
-		marginHorizontal: 8,
-		paddingHorizontal: 15,
+		borderRadius: 5,
 		backgroundColor: theme.colors.white,
+		paddingHorizontal: 8,
+		justifyContent: "center",
 	},
-	journal_date_details: {
+	journal_details_internal_container: {
 		flexDirection: "row",
-		backgroundColor: "red",
+		alignItems: "center",
+		width: "100%",
+		justifyContent: "center",
+		marginTop: 9,
+	},
+	journal_card_icon: {
+		width: "6%",
+		height: 15,
+	},
+	journal_details_text_container: {
+		width: "92%",
+		flexDirection: "row",
 		justifyContent: "space-between",
+		marginLeft: 8,
+		alignItems: "center",
+	},
+	journal_details_text: {
+		width: "50%",
+		fontSize: theme.fontSize.smallText,
+		fontFamily: theme.fontFamilies.text,
+		color: theme.colors.black,
+	},
+	journal_details_date: {
+		width: "50%",
+		fontSize: theme.fontSize.xSmallText,
+		fontFamily: theme.fontFamilies.text,
+		textAlign: "right",
+		color: theme.colors.fadeBlack,
+	},
+	product_of_the_month_text: {
+		color: theme.colors.black,
+		fontFamily: theme.fontFamilies.bold,
+		fontSize: theme.fontSize.titleMedium,
+		marginTop: 25,
 	},
 });
