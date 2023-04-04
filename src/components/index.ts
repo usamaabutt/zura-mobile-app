@@ -5,3 +5,5 @@ export { ProductCard } from "./product-card";
 export { Carousel } from "./carousel";
 export { ShopHeader } from "./header/shop-header";
 export { ProductDetailHeader } from "./header/product-detail-header";
+export { MoonRitualsCard } from "./moon-rituals-card";
+export { MoonRitualHeader } from "./header/moon-ritual-header";

@@ -1,11 +1,10 @@
-import { Platform, StatusBar, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { theme } from "../../ui";
 
 export const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: theme.colors.background,
-		marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
 	},
 	logoText: {
 		width: 35,

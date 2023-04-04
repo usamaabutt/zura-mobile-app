@@ -1,14 +1,14 @@
-//just add name of the screen in the center of the screen
-
 import React from "react";
-import { View, Text } from "react-native";
+import { ScrollView, View } from "react-native";
+import { Spacer, MoonRitualHeader, MoonRitualsCard } from "../../components";
 
 const MoonRitualsScreen = () => {
 	return (
-		<View
-			style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-		>
-			<Text>Moon Rituals Screen</Text>
+		<View style={{ flex: 1 }}>
+			<MoonRitualHeader date={`MARCH 7, FULL MOON`} />
+			<ScrollView>
+				<MoonRitualsCard />
+			</ScrollView>
 		</View>
 	);
 };

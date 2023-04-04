@@ -11,14 +11,13 @@ import { images } from "../../assets/images";
 import { styles } from "./styles";
 import Header from "../../components/header/home-header";
 import { icons } from "../../assets/icons";
-import { theme } from "../../ui";
 import { Button, Spacer } from "../../components";
 import { MonthlyProductCard } from "../../components";
 
 export const HomeScreen = () => {
 	const [rating, setRating] = React.useState(0);
 	return (
-		<SafeAreaView style={styles.container}>
+		<View style={styles.container}>
 			<ScrollView
 				contentContainerStyle={{
 					paddingHorizontal: 9,
@@ -101,7 +100,7 @@ export const HomeScreen = () => {
 					setRating={(value) => setRating(value)}
 				/>
 			</ScrollView>
-		</SafeAreaView>
+		</View>
 	);
 };
 
