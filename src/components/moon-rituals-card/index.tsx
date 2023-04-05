@@ -39,7 +39,7 @@ export const MoonRitualsCard: FC<Props> = () => {
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: "#FFF6F1",
+		backgroundColor: theme.colors.cream,
 		paddingHorizontal: 13,
 		paddingTop: 13,
 		alignItems: "center",

@@ -23,6 +23,7 @@ export const HomeScreen = () => {
 					paddingHorizontal: 9,
 					paddingBottom: 10,
 				}}
+				showsVerticalScrollIndicator={false}
 			>
 				<Header />
 				<View style={styles.cardView}>

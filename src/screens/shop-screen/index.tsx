@@ -49,7 +49,10 @@ const ShopScreen: FC<Props> = ({ navigation }) => {
 
 	return (
 		<View style={styles.container}>
-			<ScrollView contentContainerStyle={styles.scrollView}>
+			<ScrollView
+				contentContainerStyle={styles.scrollView}
+				showsVerticalScrollIndicator={false}
+			>
 				<Spacer.Column numberOfSpaces={2} />
 				<ShopHeader />
 				<ImageBackground

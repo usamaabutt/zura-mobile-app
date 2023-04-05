@@ -33,6 +33,7 @@ const colors = {
 	pink50: "#FF796F",
 	primary: "#852D38",
 	secondary: "#864F54",
+	cream: "#FFF6F1",
 };
 
 const spacesFrom1 = Array.from({ length: 64 }, (_, i) => i + 1);
