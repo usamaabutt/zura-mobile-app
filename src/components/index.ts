@@ -10,3 +10,4 @@ export { MoonRitualHeader } from "./header/moon-ritual-header";
 export { JournalMonthCard } from "./journal-month-card";
 export { JournalDetailCard } from "./journal-detail-card";
 export { AddJournalHeader } from "./header/add-journal-header";
+export { BottomSheetComponent } from "./bottom-sheet";

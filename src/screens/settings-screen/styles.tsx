@@ -1,0 +1,111 @@
+import { StyleSheet } from "react-native";
+import { theme } from "../../ui";
+
+export const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		paddingHorizontal: 12,
+		paddingTop: 5,
+	},
+	userCard: {
+		width: "100%",
+		backgroundColor: theme.colors.white,
+		borderRadius: 5,
+		flexDirection: "row",
+		alignItems: "center",
+		padding: 17,
+		// justifyContent: "space-between",
+	},
+	profileImage: {
+		width: 64,
+		height: 64,
+		borderRadius: 32,
+		marginRight: 17,
+	},
+	cardDetailsContainer: {
+		flex: 1,
+		paddingRight: 7,
+	},
+	name: {
+		fontFamily: theme.fontFamilies.bold,
+		fontSize: theme.fontSize.titleMedium,
+		color: theme.colors.black,
+		lineHeight: 18,
+	},
+	email: {
+		fontFamily: theme.fontFamilies.text,
+		fontSize: theme.fontSize.smallText,
+		color: theme.colors.black,
+		marginTop: 3,
+		lineHeight: 18,
+	},
+	header: {
+		fontFamily: theme.fontFamilies.bold,
+		fontSize: theme.fontSize.titleMedium,
+		color: theme.colors.black,
+		lineHeight: 18,
+		marginVertical: 17,
+		textTransform: "uppercase",
+	},
+	blessingBox: {
+		width: "100%",
+		backgroundColor: theme.colors.white,
+		borderRadius: 5,
+		padding: 20,
+	},
+	editIcon: {
+		position: "absolute",
+		right: 10,
+		top: 7,
+	},
+	innerContainer: {
+		width: "100%",
+		marginBottom: 18,
+		flexDirection: "row",
+		// alignItems: "center",
+	},
+	blessing: {
+		fontFamily: theme.fontFamilies.text,
+		fontSize: theme.fontSize.smallText,
+		color: theme.colors.gray80,
+	},
+	title: {
+		color: theme.colors.gray80,
+		fontFamily: theme.fontFamilies.text,
+		fontSize: theme.fontSize.smallText,
+		marginLeft: 12,
+		width: "30%",
+		marginRight: 10,
+		textTransform: "uppercase",
+		lineHeight: 17,
+		marginTop: 2,
+	},
+	detail: {
+		fontSize: theme.fontSize.smallText,
+		color: theme.colors.gray80,
+		fontFamily: theme.fontFamilies.text,
+		textTransform: "uppercase",
+		width: "55%",
+		lineHeight: 18,
+		marginTop: 2,
+	},
+	icon: {
+		width: 23,
+	},
+	blessingBoxDetail: {
+		color: theme.colors.primary,
+		fontSize: theme.fontSize.smallText,
+		fontFamily: theme.fontFamilies.text,
+		lineHeight: 18,
+	},
+	overlay: {
+		position: "absolute",
+		top: 0,
+		bottom: 0,
+		left: 0,
+		right: 0,
+		backgroundColor: "black",
+		opacity: 0.5,
+		zIndex: 0,
+	},
+});
