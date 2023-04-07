@@ -91,22 +91,22 @@ const SettingsScreen = () => {
 					<View style={styles.overlay} />
 				</TouchableWithoutFeedback>
 			)}
-			{/* <BottomSheetComponent
+			<BottomSheetComponent
 				handleBottomSheetClose={handleBottomSheetClose}
 				buttonOnPress={() => {}}
 				buttonText="subscribe"
-				image={images.logo}
+				icon={"zuraLogo"}
 				title="YOU’RE NOT SUBSCRIBED TO BLESSING BOX"
 				text="Lorem ipsum dolor sit amet consectetur. Quis vitae aenean eget sagittis pretium."
-			/> */}
-			<BottomSheetComponent
+			/>
+			{/* <BottomSheetComponent
 				handleBottomSheetClose={handleBottomSheetClose}
 				buttonOnPress={() => {}}
 				buttonText="Login"
 				title="YOU’RE NOT LOGIN"
-				image={images.logo}
+				icon={"login"}
 				text="Lorem ipsum dolor sit amet consectetur. Quis vitae aenean eget sagittis pretium."
-			/>
+			/> */}
 		</View>
 	);
 };

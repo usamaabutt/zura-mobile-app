@@ -8,13 +8,13 @@ import {
 } from "react-native";
 import { images } from "../../assets/images";
 import BottomSheet from "@gorhom/bottom-sheet";
-import { theme } from "../../ui";
+import { LoginIcon, theme } from "../../ui";
 import { Button } from "../button";
 
 interface BottomSheetProps {
 	handleBottomSheetClose: () => void;
 	//add type of image element
-	image: ImageSourcePropType;
+	icon: "login" | "zuraLogo";
 	title: string;
 	text: string;
 	buttonText: string;
@@ -23,7 +23,7 @@ interface BottomSheetProps {
 
 export const BottomSheetComponent: FC<BottomSheetProps> = ({
 	handleBottomSheetClose,
-	image,
+	icon,
 	title,
 	text,
 	buttonOnPress,
@@ -41,7 +41,16 @@ export const BottomSheetComponent: FC<BottomSheetProps> = ({
 			handleComponent={() => null}
 		>
 			<View style={styles.contentContainer}>
-				<Image source={image} style={styles.logo} resizeMode="cover" />
+				{/*  */}
+				{icon === "login" ? (
+					<LoginIcon />
+				) : (
+					<Image
+						source={images.logo}
+						style={styles.logo}
+						resizeMode="cover"
+					/>
+				)}
 				<Text style={styles.title}>{title}</Text>
 				<Text style={styles.text}>{text}</Text>
 				<View style={styles.buttonContainer}>
