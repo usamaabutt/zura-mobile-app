@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: theme.colors.background,
+		paddingHorizontal: 11,
 	},
 	imageBackground: {
 		flex: 1,
@@ -12,7 +13,6 @@ export const styles = StyleSheet.create({
 		height: 135,
 		justifyContent: "center",
 		alignItems: "center",
-		marginTop: 15,
 	},
 	offCardText: {
 		color: theme.colors.white,
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
 		fontFamily: theme.fontFamilies.bold,
 		marginTop: 20,
 	},
-	scrollView: { paddingHorizontal: 11, paddingBottom: 15 },
+	scrollView: { paddingBottom: 15 },
 	buttonsContainer: {
 		flexDirection: "row",
 		justifyContent: "space-between",

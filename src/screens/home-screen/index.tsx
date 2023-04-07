@@ -18,14 +18,14 @@ export const HomeScreen = () => {
 	const [rating, setRating] = React.useState(0);
 	return (
 		<View style={styles.container}>
+			<Header />
+
 			<ScrollView
 				contentContainerStyle={{
-					paddingHorizontal: 9,
 					paddingBottom: 10,
 				}}
 				showsVerticalScrollIndicator={false}
 			>
-				<Header />
 				<View style={styles.cardView}>
 					<ImageBackground
 						source={images.card_background}
